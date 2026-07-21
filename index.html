@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia's Room</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/favicon_latterart.png" type="image/x-icon">
+
+</head>
+<body>
+    <!-- Logo icon & navigation bar -->
+    <header class="main-header">
+
+        <!-- tombol Burger-->
+          <button class="burger-menu" onclick="toggleMenu()">
+          ☰
+          </button>
+
+        <!-- Logo website-->
+         <div class="logo-icon"></div>
+
+         <!-- Navigasi-->
+         <nav>
+         <a href="#section-profile">Profile</a>
+         <a href="#section-portofolio">Portofolio</a>
+         <a href="#section-contact" class="nav-contact">Contact</a>
+
+         </nav>
+    </header>
+
+    <!-- Contents -->
+    <main>
+        <!--Section Home -->
+    <section id="section-home">
+        
+        <!-- Welcome message -->
+        <div class="welcome">
+            <p><h2>Welcome to my room,🍨︴<span id="guest_name"></span>✰</h2></p>
+            </div>
+        <!-- Banner -->
+        <img class="banner banner-1" src= "assets/banner-1.jpg"/>
+        <img class="banner banner-2" src= "assets/banner-2.jpg"/>
+        <img class="banner banner-3" src= "assets/banner-3.jpg"/>
+    </section>
+
+         <!-- Section Profile -->
+         <section id="section-profile">
+            <header>
+
+         <!-- Profile Picture-->
+        <div class="about-me">
+         <img class="profile-pict" src="assets/DP_Sofia.jpg"/>
+
+         <!-- My profile --> 
+         <div class="profile">
+            <p><h4>Hello, i am Sofia.</h4>
+            <p>
+            creative, empathetic, value-driven, and an adapter problem solver. 
+            Experienced in social media and growth marketing positions, in addition to customer 
+            service in a tech company, I am eager to impact any professional projects
+            with a proven track in creative research, planning, and analyzing 
+            marketing or campaign activity results for making an impact.
+            </p>
+            I am open to work! Let's Connect
+            </p>   
+        </div>
+        </section>
+   
+         <!-- Section Portofolio -->
+          <section id="section-portofolio">
+            <header>
+                <div class="portofolio-head">
+                    <h2>Portofolio</h2>
+                </div>
+            </header>
+    
+        <div class="portofolio-gallery">
+            <figure>
+                <a class="portfolio-card" href="https://docs.google.com/presentation/d/1Wpa0OVVNUMXiaFsfJW2lqkYw8vBuYmEuPRCIJ25q4jM/edit?usp=drive_link" target="_blank"></a>
+                <img class="porto" src="assets/Revou-software.jpg" alt="Website-portfolio">
+                <figcaption>Website Portfolio</figcaption>
+            </figure>
+
+            <figure>
+                <a class="portfolio-card" href="https://docs.google.com/presentation/d/1Wpa0OVVNUMXiaFsfJW2lqkYw8vBuYmEuPRCIJ25q4jM/edit?usp=drive_link" target="_blank"></a>
+                <img class="porto" src="assets/PADADAM.jpg" alt="Application-portfolio">
+                <figcaption>Website Portfolio</figcaption>
+                <figcaption>OTT Interface Project</figcaption>
+            </figure>
+
+            <figure>
+                <a class="portfolio-card" href="https://docs.google.com/presentation/d/1Wpa0OVVNUMXiaFsfJW2lqkYw8vBuYmEuPRCIJ25q4jM/edit?usp=drive_link" target="_blank"></a>
+                <img class="porto" src="assets/Revou - data.jpg" alt="Website-portfolio">
+                <figcaption>10 days-Learn SQL & tableau</figcaption>
+            </figure>
+
+            <figure>
+                <a class="portfolio-card" href="https://docs.google.com/presentation/d/1Wpa0OVVNUMXiaFsfJW2lqkYw8vBuYmEuPRCIJ25q4jM/edit?usp=drive_link" target="_blank"></a>
+                <img class="porto" src="assets/Revou_Marketing.jpg" alt="Website-portfolio">
+                <figcaption>10days-learning: KOL Influencer</figcaption>
+            </figure>
+        </div>
+
+          <!-- Section Contacts -->
+           <section id="section-contact">
+            <header class="contact-me">
+               <h2>Contact Me</h2>
+                </header>
+
+            <!-- Form Question -->
+                <div class="container">
+                    <form class="form-input" name="message_form" onsubmit="return false;">
+                    <table>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td><input type="text" id="input-name" placeholder="Nama" required></td>
+                        </tr>
+
+                        <tr>
+                            <td>Tanggal lahir</td>
+                            <td>:</td>
+                            <td><input type="date" id="input-date"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Jenis kelamin</td>
+                            <td>:</td>
+                            <td>
+                            <input type="radio" id="male" name="input-sex" value="Laki-laki">
+                                <label for="male">Laki-laki</label>
+                            <input type="radio" id="female" name="input-sex" value="Perempuan">
+                            <label for="female">Perempuan</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td><input type="email" id="input-email" placeholder="Email" required></td>
+                        </tr>
+                
+
+                        <tr>
+                            <td>Pesan</td>
+                            <td>:</td>
+                            <td><textarea name="input-message" id="input-messages" placeholder="Pesan kamu"></textarea>
+                            </td>
+                        </tr>
+
+                        <tr>
+                        <td><button type="Submit" onclick="validateForm()">Submit</button><td>
+                        <tr>
+                        </table>
+                </form>
+
+            <!-- Form Output -->
+                <div class="form_output">
+                    <p>Nama : <span id="sender-name"></span></p>
+                    <p>Tanggal Lahir : <span id="sender-birth-date"></span></p>
+                    <p>Jenis Kelamin : <span id="sender-sex"></span></p>
+                    <p>Email : <span id="sender-email"></span></p>
+                    <p>Pesan : <span id="sender-messages"></span></p>
+                 </div>
+            </div>
+        
+    </main>
+    <!-- Copyright -->
+    <footer>
+        <div> 
+            <copyright>©2024, Sofia Han</copyright> 
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

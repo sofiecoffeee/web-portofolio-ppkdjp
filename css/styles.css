@@ -1,0 +1,313 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+    @media only screen and (max-width: 600px) {
+        .main-header {
+            flex-direction: column;
+        }
+    }
+.main-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b6aad8;
+    padding:5px 
+}
+.burger-menu {
+    width: 5%;
+}
+
+.logo-icon {
+    height: 60px;
+    width: 60px;
+    background-image: url(../assets/logo_white.png);
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+            flex-direction: column;
+        }
+    }
+
+
+nav {
+    display: flex;
+    padding: 10px;
+}
+
+nav>a {
+    text-decoration: none;
+    flex-direction:
+    font-weight:bold;
+    color: whitesmoke;
+    padding: 10px;
+    margin:5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #7E60BF;
+    padding: 10px 16px;
+    margin: 5px;
+    background-color: white;
+    border: 1px solid #7E60BF;
+    border-radius: 999px;
+}
+
+nav>a:hover {
+      color: #7E60BF;
+}
+
+.nav-contact:hover {
+    background-color: #7E60BF;
+    color: white;
+    border-color: #7E60BF;
+}
+
+#section-home {
+    display: block;
+    flex-direction: column;
+    height:content;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome {
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    font: message-box;
+    color: #7E60BF;
+}
+
+.banner-1 {
+    width: 100%;
+    height:auto;
+    align-content: stretch;
+    justify-content: center;
+}
+
+.banner-2 {
+    width: 100%;
+    height:auto;
+    align-content: stretch;
+    justify-content: center;
+}
+
+.banner-3 {
+    position:relative;
+    width: 100%;
+    height:auto;
+    align-content: stretch;
+    justify-content: center;
+}
+
+
+.main-profile {
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    font: message-box;
+    color: #7E60BF;
+}
+
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    color: #fff;
+    background-color: #b6aad8;
+}
+
+@media only screen and (max-width: 600px) {
+        .about-me {
+            flex-direction: column;
+            text-align: justify;
+        }
+    }
+
+.profile-pict {
+    padding: 20px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.profile {
+    margin: 16px 0;
+    padding: 20px;
+    text-align: justify;
+    font: message-box;
+    line-height: 24px;
+}
+
+.portofolio-head {
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    font: message-box;
+    color: #7E60BF;
+    padding: 20px;
+}
+
+.portofolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    width: 100%;
+    max-width: 1200px; 
+    object-fit: cover;   /* Biar menutup seluruh sudut tanpa celah */
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.portofolio-gallery figure {
+  position: relative;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1e1e24;
+
+/* Upaya tinggi kartu konsisten */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.porto {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  display: block;
+  background-color: #1e1e24;
+  filter: brightness(0.4);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Efek Terang & Zoom saat Hover */
+.portofolio-gallery figure:hover .porto {
+  filter: brightness(1);
+  transform: scale(1.03);
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight:bold;
+
+/* Background transparan hitam di bawah teks */
+  background: rgba(0, 0, 0, 0.6);
+  
+  /* Efek Sembunyi */ 
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Caption Naik & Muncul saat Hover */
+.portofolio-gallery figure:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Layout (HP & Tablet) */
+@media (max-width: 900px) { 
+  .portofolio-gallery {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;}
+}
+
+.contact-me {
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+    font: message-box;
+    color: #7E60BF;
+}
+
+@media only screen and (max-width: 600px) {
+    .container  {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #input-name,
+    #input-messages {
+        width: 70%
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    font: message-box;
+    color: whitesmoke;
+    background-color: #b6aad8;
+    
+}
+
+.form-input {
+    border: 1px solid;
+    background-color: whitesmoke;
+    width: 50%;
+    height: 50%;
+    margin: 20px;
+    padding: 20px;
+    color: black;
+    border-color: #7E60BF;
+}
+
+td {
+    padding: 2px;
+}
+
+button {
+    width: 100%;
+}
+
+.form_output {
+    border: 1px solid;
+    background-color: whitesmoke;
+    width: 50%;
+    height: auto;
+    margin: 20px;
+    padding: 20px;
+    color: black;
+    border-color: #7E60BF;
+}
+
+footer>div
+{text-align: center;
+    font-size: small;
+    padding: 20px;
+    font: small-caption;
+    font-style: italic;
+}
